@@ -8,5 +8,7 @@ namespace CRM_Auth.Application.useCases.Comment.Command
 {
     public class UpdateCommentCommand
     {
+        public Guid Id { get; set; }
+        public string? Message { get; set; }
     }
 }
