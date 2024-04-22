@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRM_Auth.Application.useCases.Comment.Query
+namespace CRM_Auth.Application.useCases.Comments.Handler
 {
-    public class GetCommentByIdQuery
+    public class GetCommentByIdQueryHandler
     {
     }
 }
