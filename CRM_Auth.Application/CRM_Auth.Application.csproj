@@ -8,7 +8,8 @@
 
   <ItemGroup>
     <Folder Include="useCases\Comment\" />
-    <Folder Include="useCases\Lessson\" />
+    <Folder Include="useCases\Lessson\Handlers\" />
+    <Folder Include="useCases\Lessson\Queries\" />
     <Folder Include="useCases\Teacher\" />
   </ItemGroup>
 
