@@ -8,5 +8,6 @@ namespace CRM_Auth.Application.useCases.Comment.Command
 {
     public class DeleteCommentCommand
     {
+        public Guid Id { get; set; }
     }
 }
