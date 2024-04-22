@@ -1,9 +1,7 @@
-﻿
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace CRM_Auth.Domain.Entities
 {
-
     public class Student : IdentityUser
     {
         public Guid Id { get; set; } = Guid.NewGuid();

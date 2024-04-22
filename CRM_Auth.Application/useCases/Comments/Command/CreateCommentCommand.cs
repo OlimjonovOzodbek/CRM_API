@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CRM_Auth.Application.useCases.Comment.Command
+﻿using CRM_Auth.Domain.Entities;
+using MediatR;
+
+namespace CRM_Auth.Application.useCases.Comments.Command
 {
-    public class CreateCommentCommand
+    public class CreateCommentCommand : IRequest<Comment>
     {
+        public string? Message { get; set; }
+        public Guid LessonId { get; set; }
+        public Guid UserId { get; set; }
     }
 }
