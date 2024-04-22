@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="useCases\Comment\" />
+    <Folder Include="useCases\Lessson\Handlers\" />
+    <Folder Include="useCases\Lessson\Queries\" />
+    <Folder Include="useCases\Teacher\" />
     <PackageReference Include="MediatR" Version="11.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
   </ItemGroup>
