@@ -9,6 +9,6 @@ namespace CRM_Auth.Domain.Entities
     public class Course
     {
         public Guid Id { get; set; } = Guid.NewGuid();
-
+        public string CourseName { get; set; }
     }
 }
