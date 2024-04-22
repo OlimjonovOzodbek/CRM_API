@@ -12,5 +12,8 @@ namespace CRM_Auth.Domain.Entities
         public string? Message { get; set; }
         public Guid LessonId { get; set; }
         public Guid UserId { get; set; }
+
+        public virtual Lesson Lesson { get; set; }
+        public virtual User User { get; set; }
     }
 }
