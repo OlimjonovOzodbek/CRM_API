@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CRM_Auth.Application\CRM_Auth.Application.csproj" />
     <ProjectReference Include="..\CRM_Auth.Domain\CRM_Auth.Domain.csproj" />
   </ItemGroup>
 

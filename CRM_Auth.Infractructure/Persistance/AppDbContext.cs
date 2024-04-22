@@ -1,4 +1,5 @@
-﻿using CRM_Auth.Domain.Entities;
+﻿using CRM_Auth.Application.Abstractions;
+using CRM_Auth.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -10,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace CRM_Auth.Infractructure.Persistance
 {
-    public class AppDbContext : IdentityDbContext<IdentityUser>
+    public class AppDbContext : IdentityDbContext<IdentityUser>, IApplicationDbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) 
-            :base (options)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
         {
             Database.Migrate();
         }
@@ -25,6 +26,11 @@ namespace CRM_Auth.Infractructure.Persistance
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+        }
+
+        async ValueTask<int> IApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken)
+        {
+            return await base.SaveChangesAsync(cancellationToken);
         }
     }
 }
