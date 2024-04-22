@@ -12,7 +12,8 @@ namespace CRM_Auth.Infractructure.Persistance
 {
     public class AppDbContext : IdentityDbContext<IdentityUser>
     {
-        public AppDbContext()
+        public AppDbContext(DbContextOptions<AppDbContext> options) 
+            :base (options)
         {
             Database.Migrate();
         }

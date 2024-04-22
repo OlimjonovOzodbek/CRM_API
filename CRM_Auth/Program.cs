@@ -1,4 +1,4 @@
-
+using CRM_Auth.Infractructure;
 namespace CRM_Auth
 {
     public class Program
@@ -12,7 +12,11 @@ namespace CRM_Auth
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
+
+            builder.Services.AddInfrastructure(builder.Configuration);
+
             builder.Services.AddSwaggerGen();
+           
 
             var app = builder.Build();
 
